@@ -1,0 +1,44 @@
+.youtubeCard{
+    width: 300px;
+    
+    transition: all 0.5s;
+    
+    margin: 2vmax;
+    border-radius: 10px;
+  margin-left: 45%;
+   
+   
+}
+.youtubeCard > a {
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+    width: inherit;
+    text-align: center;
+    margin-left: 10px;
+}
+.youtubeCard > a >p {
+    padding: 20px;
+}
+
+.youtubeCard img {
+    width: inherit;
+
+    border-radius: 10px;
+}
+
+.youtubeCard :hover{
+    transform: scale(1.1);
+    
+}
+@media screen and (max-width:420px) {
+    .youtubeCard{
+       
+      margin-left: 5%;
+       
+       
+    }
+}

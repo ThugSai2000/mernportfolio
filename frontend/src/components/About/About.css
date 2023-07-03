@@ -1,0 +1,138 @@
+.about{
+    width: 100%;
+    min-height: 100vh;
+    background-color: purple;
+    display: flex;
+    
+}
+.aboutContainer1{
+width: 60%;
+min-height: 70vh;
+right: 25px;
+top: 25px;
+display: flex;
+justify-content: right;
+padding: 2vmax;
+box-sizing: border-box;
+background-color: white;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+position: absolute;
+z-index: 1;
+
+}
+.aboutContainer1 > p{
+  width: 30%;
+  text-align: right;
+  word-spacing: 5px;
+  line-height: 60px;
+  font-size: 1.5vmax;
+  color: rgba(15, 15, 15, 0.822);
+  
+  }
+.aboutContainer2{
+    width: 60%;
+    min-height: 80vh;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+    z-index: 2;
+    display: flex;
+    box-sizing: border-box;
+    padding: 2vmax;
+    display: flex;
+    box-sizing: border-box;
+    transform: translateX(-100vw) translateY(-10%) rotateZ(-360deg);
+    animation: aboutAnimation 1s ease-in forwards;
+    
+    }
+    
+.aboutContainer2 > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2vmax;
+    color: rgba(17, 17, 17, 0.712);
+    box-sizing: border-box;
+}
+.aboutContainer2 > div:first-child{
+    align-items: center;
+}
+
+
+
+.aboutAvatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    transition: all 1s;
+}
+@keyframes aboutAnimation {
+    to {
+      transform: translateX(20%) translateY(15%);
+    }
+  }
+  @keyframes aboutAnimationPhone {
+    to {
+      transform: translateX(0%) translateY(0%);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .about {
+      align-items: flex-end;
+      padding-top: 100px;
+    }
+    .aboutContainer1 {
+      display: none;
+    }
+    .aboutContainer2{
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      animation: aboutAnimationPhone ease-in is forwards;
+    }
+    .aboutContainer2 > div:last-child>p{
+      text-align: center;
+    }
+    .aboutAvatar{
+      width: 100px;
+      height: 100px;
+    }
+    
+}
+@media screen and (max-width: 420px) {
+  .about {
+    height: 125vh;
+    align-items: flex-end;
+    padding-top: 0px;
+  }
+  .aboutContainer1 {
+    display: none;
+  }
+  .aboutContainer2{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    
+    animation: aboutAnimationPhone ease-in is forwards;
+  }
+  .aboutContainer2 > div:last-child > p{
+    text-align: center;
+  }
+  
+  .aboutAvatar{
+    width: 150px;
+    height: 150px;
+    transform:  translateY(-70%);
+  }
+  @keyframes aboutAnimation {
+    to {
+      transform: translateX(0%) translateY(0%);
+    }
+  }
+  
+
+  
+}

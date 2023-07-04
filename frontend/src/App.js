@@ -20,7 +20,8 @@ import Loader from "./components/Loader/Loader";
 function App() {
 
   const dispatch = useDispatch();
-
+  
+  
   const { loading, isAuthenticated} = useSelector((state) => state.login)
  
 
@@ -31,7 +32,7 @@ function App() {
 
   
   return (
-  <Router>
+  <Router >
     
       {loading ? ( <Loader/>) : (<>
       

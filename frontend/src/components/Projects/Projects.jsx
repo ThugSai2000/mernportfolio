@@ -29,7 +29,7 @@ export const ProjectCard = ({
     </div>
     <div>
         <Typography variant='h4'  >About Project</Typography>
-        <Typography  >{description}</Typography>
+        <Typography  style={{textAlign:"center"}}>{description}</Typography>
         <Typography variant='h6' 
         >Tech: {technologies}</Typography>
     </div>

@@ -27,8 +27,8 @@ const AdminPanel = () => {
     const [skills, setSkills]  = useState({})
     const [about, setAbout] = useState({})
 
-    const submitHandler = () => {
-            
+    const submitHandler = (e) => {
+            e.preventDefault()
             dispatch(updateUser(name, email, password, skills, about))
 
             console.log(name, email, password, skills, about)

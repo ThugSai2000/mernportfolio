@@ -14,15 +14,15 @@ import AdminPanel from "./components/Admin/AdminPanel";
 import Timeline from "./components/Admin/Timeline";
 import Youtube from "./components/Admin/Youtube";
 import Project from "./components/Admin/Project";
-import Loader from "./components/Loader/Loader";
+/*import Loader from "./components/Loader/Loader";*/
 
 
 function App() {
 
   const dispatch = useDispatch();
   
-  
-  const { loading, isAuthenticated} = useSelector((state) => state.login)
+  /*loading,*/
+  const { isAuthenticated} = useSelector((state) => state.login)
  
 
     useEffect(()=>{
@@ -30,11 +30,11 @@ function App() {
     dispatch(loadUser())
   },[dispatch])
 
-  
+  /*{loading ? ( <Loader/>) : (<> </>)}*/
   return (
   <Router >
     
-      {loading ? ( <Loader/>) : (<>
+     
       
         <Header/>
             <Routes>
@@ -50,7 +50,7 @@ function App() {
             </Routes>
         <Footer/>
 
-      </>)}
+     
     
     </Router>
    

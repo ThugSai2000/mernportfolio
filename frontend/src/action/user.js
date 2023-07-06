@@ -1,6 +1,6 @@
 import axios from "axios"
 
-
+const url = "https://saikiran-portfolio.onrender.com"
 
 export const getUser = () => async (dispatch) => {
     try {
@@ -8,7 +8,7 @@ export const getUser = () => async (dispatch) => {
             type:"GET_USER_REQUEST",
         })
 
-        const { data } = await axios.get("/api/v1/user")
+        const { data } = await axios.get(`${url}/api/v1/user`)
         dispatch({
             type:"GET_USER_SUCCESS",
             payload: data.user,
@@ -27,7 +27,7 @@ export const login = (email,password) => async (dispatch) =>{
             type:"LOGIN_REQUEST"
         })
 
-        const {data} = await axios.post("/api/v1/login",{
+        const {data} = await axios.post(`${url}/api/v1/login`,{
             email,
             password}, 
             {

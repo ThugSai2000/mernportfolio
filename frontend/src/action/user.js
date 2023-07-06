@@ -1,5 +1,7 @@
 import axios from "axios"
 
+
+
 export const getUser = () => async (dispatch) => {
     try {
         dispatch({
@@ -138,7 +140,7 @@ export const deleteTimeline = (id) => async (dispatch) =>{
             type:"DELETE_TIMELINE_REQUEST"
         })
 
-        const {data} = await axios.delete(`/api/v1/admin/timeline/${id}`)
+        const {data} = await axios.delete(`/api/v1/admin/timeline${id}`)
         dispatch({
             type:"DELETE_TIMELINE_SUCCESS",
             payload:data.message
@@ -182,7 +184,7 @@ export const deleteYoutube = (id) => async (dispatch) =>{
             type:"DELETE_YOUTUBE_REQUEST"
         })
 
-        const {data} = await axios.delete(`/api/v1/admin/youtube/${id}`)
+        const {data} = await axios.delete(`/api/v1/admin/youtube${id}`)
         dispatch({
             type:"DELETE_YOUTUBE_SUCCESS",
             payload:data.message
@@ -226,7 +228,7 @@ export const deleteProject = (id) => async (dispatch) =>{
             type:"DELETE_PROJECT_REQUEST"
         })
 
-        const {data} = await axios.delete(`/api/v1/admin/project/${id}`)
+        const {data} = await axios.delete(`/api/v1/admin/project${id}`)
         dispatch({
             type:"DELETE_PROJECT_SUCCESS",
             payload:data.message
